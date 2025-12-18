@@ -8,6 +8,11 @@ unverified users.
 
 This is my first video of this sort, so of course I made a big boo boo by placing a semicolon at the end of an if statement and not noticing it until after the video was finished.
 
+I also totally forgot to point out, why the keygen has to start the crackme, so let me explain:
+The crackme uses a call to time(0) to get the number of elapsed seconds since epoch and uses them to seed the random generator.
+Since the resolution of time() is one second, the crackme has to be started within the same second in order for the keygen to get the same value and be able to calculate the relevant char.
+Thus the keygen first gets time(0) and starts the crackme immetiately afterwards, which then should run within the same second and therefore get the same seed value.
+
 Playlist is here: https://www.youtube.com/playlist?list=PLnntGq1c257P5dt0TB1vNILAylSJB5u42
 
 No narration
